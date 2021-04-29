@@ -6,11 +6,15 @@ class DockingStation
     end
 
     def dock_bike(bike)
-     
+        bike
 
     end
+
+    def bike
+    end
+    
 end
 
 docking_station = DockingStation.new
-docking_station.dock_bike
+#docking_station.dock_bike(bike)
 
