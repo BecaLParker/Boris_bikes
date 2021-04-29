@@ -7,4 +7,10 @@ describe DockingStation do
         bike = subject.release_bike
         expect(bike).to be_working
     end
+
+    it 'docks bike at docking station' do
+        bike = subject.dock_bike
+        expect(bike).to true 
+    end
+
 end
