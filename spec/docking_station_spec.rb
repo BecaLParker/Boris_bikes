@@ -1,5 +1,6 @@
 require 'docking_station.rb'
 
+
 describe DockingStation do 
     it { is_expected.to respond_to :release_bike }
     
@@ -8,9 +9,7 @@ describe DockingStation do
         expect(bike).to be_working
     end
 
-    it 'docks bike at docking station' do
-        bike = subject.dock_bike
-        expect(bike).to true 
-    end
+    #it 'docks bike at docking station' do
+     it { is_expected.to respond_to(:dock_bike).with(1).argument }
 
 end
