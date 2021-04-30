@@ -17,10 +17,16 @@ describe DockingStation do
     #     bike = subject.release_bike
     #     expect(bike).to be_working
     # end
-
-    it 'docks bike at docking station' do
-        bike = Bike.new
-        docked_bike = subject.dock(bike)
-        expect(docked_bike).to eq(bike)
+    describe '#dock' do
+        it 'docks bike at docking station' do
+            bike = Bike.new
+            docked_bike = subject.dock(bike)
+            expect(docked_bike).to eq(bike)
+        end
+        it 'raises an error when the dock is full' do
+            subject.dock(Bike.new)
+            expect { subject.dock Bike.new }.to raise_error 'Dock is full'
+        end
     end
+    
 end
